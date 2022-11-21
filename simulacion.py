@@ -4,6 +4,8 @@ import xmltodict
 import os
 import random
 
+from mongoengine import connect
+from mongoengine import Document, IntField, FloatField
 
 class Generar_parametros(object):
 
@@ -25,6 +27,36 @@ class Generar_parametros(object):
     def get_decel(self,mu,sigma):
         return random.normalvariate(mu, sigma)
 
+
+class Parametros(Document):
+    length = IntField(required=True)
+    maxSpeed = FloatField(required=True)
+    speedFactor = FloatField(required=True)
+    speeddev= FloatField(required=True)
+    accel= FloatField(required=True)
+    decel= FloatField(required=True)
+    speed_out_average = FloatField()
+    
+    def conectarse(self,db):
+        if connect(db):
+            print("conectado")
+        else:
+            print("error")        
+        
+    
+simulaciones = Parametros()
+generar_parametros=Generar_parametros()
+simulaciones.conectarse('simulacionesdb')
+simulaciones.length=generar_parametros.get_length(3,5)
+simulaciones.maxSpeed=generar_parametros.get_maxspeed(5,8)
+simulaciones.speedFactor=generar_parametros.get_speedfactor(0,1)
+simulaciones.speeddev=generar_parametros.get_speeddev(2,3)
+simulaciones.accel=generar_parametros.get_accel(0,1)
+simulaciones.decel=generar_parametros.get_decel(0,1)
+
+simulaciones.save()
+
+print(simulaciones.maxSpeed)
 
 def gen_vehicle(id,vClass):
     
