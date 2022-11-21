@@ -43,35 +43,36 @@ class Parametros(Document):
         else:
             print("error")        
         
-    
-simulaciones = Parametros()
-generar_parametros=Generar_parametros()
-simulaciones.conectarse('simulacionesdb')
-simulaciones.length=generar_parametros.get_length(3,5)
-simulaciones.maxSpeed=generar_parametros.get_maxspeed(5,8)
-simulaciones.speedFactor=generar_parametros.get_speedfactor(0,1)
-simulaciones.speeddev=generar_parametros.get_speeddev(2,3)
-simulaciones.accel=generar_parametros.get_accel(0,1)
-simulaciones.decel=generar_parametros.get_decel(0,1)
-
-simulaciones.save()
-
-print(simulaciones.maxSpeed)
 
 def gen_vehicle(id,vClass):
-    
+    simulaciones = Parametros()
     generar_parametros=Generar_parametros()
+    simulaciones.conectarse('simulacionesdb')
+    simulaciones.length=generar_parametros.get_length(3,5)
+    length=simulaciones.length
+    simulaciones.maxSpeed=generar_parametros.get_maxspeed(5,8)
+    maxspeed=simulaciones.maxSpeed
+    simulaciones.speedFactor=generar_parametros.get_speedfactor(0,1)
+    speedfactor=simulaciones.speedFactor
+    simulaciones.speeddev=generar_parametros.get_speeddev(2,3)
+    speeddev=simulaciones.speeddev
+    simulaciones.accel=generar_parametros.get_accel(0,1)
+    accel=simulaciones.accel
+    simulaciones.decel=generar_parametros.get_decel(0,1)
+    decel=simulaciones.decel
+
+    simulaciones.save()
 
     xmldata = {'additional':{
                 'vType': {
                 '@id':id,
                 '@Vclass':vClass,
-                '@length':generar_parametros.get_length(3,5),
-                '@maxSpeed':generar_parametros.get_maxspeed(5,8),
-                '@speedFactor':generar_parametros.get_speedfactor(0,1),
-                '@speedDev':generar_parametros.get_speeddev(2,3),
-                '@accel':generar_parametros.get_accel(0,1),
-                '@decel':generar_parametros.get_decel(0,1),
+                '@length':length,
+                '@maxSpeed':maxspeed,
+                '@speedFactor':speedfactor,
+                '@speedDev':speeddev,
+                '@accel':accel,
+                '@decel':decel,
                          }
                             }
                 }
@@ -130,6 +131,6 @@ def simulacion():
 my_str = "type=\\\"type1\\\""
 
 #trips("IbarraTriangleMap.net.xml",my_str,"example.xml")
-routes("IbarraTriangleMap.net.xml","trips.trips.xml","example.xml","output.routes.xml")
+#routes("IbarraTriangleMap.net.xml","trips.trips.xml","example.xml","output.routes.xml")
 
-#gen_vehicle("type1","passenger")
+gen_vehicle("type1","passenger")
