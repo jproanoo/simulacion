@@ -48,17 +48,17 @@ def gen_vehicle(id,vClass):
     simulaciones = Parametros()
     generar_parametros=Generar_parametros()
     simulaciones.conectarse('simulacionesdb')
-    simulaciones.length=generar_parametros.get_length(3,5)
+    simulaciones.length=generar_parametros.get_length(5,2)
     length=simulaciones.length
-    simulaciones.maxSpeed=generar_parametros.get_maxspeed(5,8)
+    simulaciones.maxSpeed=generar_parametros.get_maxspeed(5,2)
     maxspeed=simulaciones.maxSpeed
-    simulaciones.speedFactor=generar_parametros.get_speedfactor(0,1)
+    simulaciones.speedFactor=generar_parametros.get_speedfactor(1,1)
     speedfactor=simulaciones.speedFactor
-    simulaciones.speeddev=generar_parametros.get_speeddev(2,3)
+    simulaciones.speeddev=generar_parametros.get_speeddev(1,1)
     speeddev=simulaciones.speeddev
-    simulaciones.accel=generar_parametros.get_accel(0,1)
+    simulaciones.accel=generar_parametros.get_accel(1,1)
     accel=simulaciones.accel
-    simulaciones.decel=generar_parametros.get_decel(0,1)
+    simulaciones.decel=generar_parametros.get_decel(1,1)
     decel=simulaciones.decel
 
     simulaciones.save()
