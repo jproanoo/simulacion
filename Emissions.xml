@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-11-10 10:19:23 by Eclipse SUMO sumo Version 1.14.1
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="IbarraTriangleMap.net.xml"/>
+        <route-files value="trips.trips.xml"/>
+        <additional-files value="add-vtype.xml"/>
+    </input>
+
+    <output>
+        <emission-output value="Emissions.xml"/>
+        <summary-output value="Summary.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+    </time>
+
+    <report>
+        <xml-validation value="never"/>
+        <duration-log.disable value="true"/>
+        <duration-log.statistics value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <emissions>
+        <device.emissions.probability value="1"/>
+    </emissions>
+
+</configuration>
+-->
+
+<emission-export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/emission_file.xsd">
+    <timestep time="0.00">
+        <vehicle id="0" eclass="HBEFA3/PC_G_EU4" CO2="2624.72" CO="164.78" HC="0.81" NOx="1.20" PMx="0.07" fuel="837.22" electricity="0.00" noise="55.94" route="!0!var#1" type="myClass" waiting="0.00" lane="51962227#1_0" pos="5.10" speed="0.00" angle="279.19" x="5615.40" y="2490.77"/>
+    </timestep>
+    <timestep time="1.00">
+        <vehicle id="0" eclass="HBEFA3/PC_G_EU4" CO2="6503.70" CO="179.90" HC="0.98" NOx="2.92" PMx="0.15" fuel="2074.39" electricity="0.00" noise="75.34" route="!0!var#1" type="myClass" waiting="0.00" lane="51962227#1_0" pos="9.15" speed="4.05" angle="279.19" x="5611.40" y="2491.42"/>
+        <vehicle id="1" eclass="HBEFA3/PC_G_EU4" CO2="2624.72" CO="164.78" HC="0.81" NOx="1.20" PMx="0.07" fuel="837.22" electricity="0.00" noise="55.94" route="!1!var#1" type="myClass" waiting="0.00" lane="-882159569#2_0" pos="4.67" speed="0.00" angle="298.44" x="3325.90" y="1173.65"/>
+    </timestep>
+    <timestep time="2.00">
+        <vehicle id="0" eclass="HBEFA3/PC_G_EU4" CO2="6368.17" CO="144.06" HC="0.81" NOx="2.79" PMx="0.13" fuel="2031.16" electricity="0.00" noise="69.59" route="!0!var#1" type="myClass" waiting="0.00" lane="51962227#1_0" pos="15.70" speed="6.54" angle="279.19" x="5604.94" y="2492.47"/>
+        <vehicle id="1" eclass="HBEFA3/PC_G_EU4" CO2="3980.35" CO="151.09" HC="0.78" NOx="1.78" PMx="0.09" fuel="1269.58" electricity="0.00" noise="67.91" route="!1!var#1" type="myClass" waiting="0.00" lane=":6952725741_5_0" pos="2.50" speed="2.50" angle="273.85" x="3323.75" y="1172.79"/>
+        <vehicle id="2" eclass="HBEFA3/PC_G_EU4" CO2="2624.72" CO="164.78" HC="0.81" NOx="1.20" PMx="0.07" fuel="837.22" electricity="0.00" noise="55.94" route="!2!var#1" type="myClass" waiting="0.00" lane="51962474#1_0" pos="5.10" speed="0.00" angle="132.16" x="3804.63" y="3637.91"/>
+    </timestep>
+    <timestep time="3.00">
+        <vehicle id="0" eclass="HBEFA3/PC_G_EU4" CO2="14070.76" CO="258.37" HC="1.52" NOx="6.32" PMx="0.32" fuel="4487.86" electricity="0.00" noise="79.09" route="!0!var#1" type="myClass" waiting="0.00" lane="51962227#1_0" pos="26.48" speed="10.79" angle="279.19" x="5594.29" y="2494.19"/>
+        <vehicle id="1" eclass="HBEFA3/PC_G_EU4" CO2="0.00" CO="0.00" HC="0.00" NOx="0.00" PMx="0.00" fuel="0.00" electricity="0.00" noise="51.60" route="!1!var#1" type="myClass" waiting="0.00" lane=":6952725741_5_0" pos="3.88" speed="1.38" angle="240.08" x="3324.05" y="1171.50"/>
+        <vehicle id="2" eclass="HBEFA3/PC_G_EU4" CO2="7282.20" CO="190.80" HC="1.04" NOx="3.28" PMx="0.17" fuel="2322.69" electricity="0.00" noise="77.09" route="!2!var#1" type="myClass" waiting="0.00" lane="51962474#1_0" pos="9.51" speed="4.41" angle="132.16" x="3807.90" y="3634.94"/>
+        <vehicle id="3" eclass="HBEFA3/PC_G_EU4" CO2="2624.72" CO="164.78" HC="0.81" NOx="1.20" PMx="0.07" fuel="837.22" electricity="0.00" noise="55.94" route="!3!var#1" type="myClass" waiting="0.00" lane="b10_0" pos="0.20" speed="0.00" angle="325.57" x="3891.31" y="2306.09"/>
+    </timestep>
+    <timestep time="4.00">
+        <vehicle id="0" eclass="HBEFA3/PC_G_EU4" CO2="11012.21" CO="176.26" HC="1.07" NOx="4.81" PMx="0.24" fuel="3512.34" electricity="0.00" noise="72.86" route="!0!var#1" type="myClass" waiting="0.00" lane="51962227#1_0" pos="39.79" speed="13.30" angle="279.19" x="5581.15" y="2496.31"/>
+        <vehicle id="1" eclass="HBEFA3/PC_G_EU4" CO2="3182.72" CO="132.86" HC="0.68" NOx="1.40" PMx="0.07" fuel="1015.18" electricity="0.00" noise="62.41" route="!1!var#1" type="myClass" waiting="0.00" lane="882159569#2_0" pos="1.83" speed="2.62" angle="154.90" x="3326.06" y="1169.97"/>
+        <vehicle id="2" eclass="HBEFA3/PC_G_EU4" CO2="10296.58" CO="205.49" HC="1.18" NOx="4.60" PMx="0.23" fuel="3284.11" electricity="0.00" noise="76.12" route="!2!var#1" type="myClass" waiting="0.00" lane="51962474#1_0" pos="17.75" speed="8.24" angle="132.16" x="3814.01" y="3629.41"/>
+        <vehicle id="3" eclass="HBEFA3/PC_G_EU4" CO2="3956.43" CO="150.90" HC="0.78" NOx="1.76" PMx="0.09" fuel="1261.95" electricity="0.00" noise="67.82" route="!3!var#1" type="myClass" waiting="0.00" lane=":8215579278_0_0" pos="2.48" speed="2.48" angle="21.63" x="3892.57" y="2308.36"/>
+        <vehicle id="4" eclass="HBEFA3/PC_G_EU4" CO2="2624.72" CO="164.78" HC="0.81" NOx="1.20" PMx="0.07" fuel="837.22" electricity="0.00" noise="55.94" route="!4!var#1" type="myClass" waiting="0.00" lane="203827231#9_0" pos="0.20" speed="0.00" angle="55.44" x="4913.44" y="2684.27"/>
+    </timestep>
+    <timestep time="5.00">
+        <vehicle id="0" eclass="HBEFA3/PC_G_EU4" CO2="5152.76" CO="50.86" HC="0.35" NOx="2.03" PMx="0.08" fuel="1643.48" electricity="0.00" noise="66.75" route="!0!var#1" type="myClass" waiting="0.00" lane="51962227#1_0" pos="53.85" speed="14.07" angle="279.19" x="5567.27" y="2498.56"/>
+        <vehicle id="1" eclass="HBEFA3/PC_G_EU4" CO2="3733.28" CO="122.94" HC="0.65" NOx="1.62" PMx="0.07" fuel="1190.77" electricity="0.00" noise="63.86" route="!1!var#1" type="myClass" waiting="0.00" lane=":6952725742_2_0" pos="1.20" speed="4.04" angle="113.63" x="3329.76" y="1168.42"/>
+        <vehicle id="2" eclass="HBEFA3/PC_G_EU4" CO2="15753.47" CO="280.02" HC="1.66" NOx="7.07" PMx="0.36" fuel="5024.55" electricity="0.00" noise="79.55" route="!2!var#1" type="myClass" waiting="0.00" lane="51962474#1_0" pos="30.17" speed="12.42" angle="132.16" x="3823.21" y="3621.08"/>
+        <vehicle id="3" eclass="HBEFA3/PC_G_EU4" CO2="6648.25" CO="162.01" HC="0.90" NOx="2.95" PMx="0.14" fuel="2120.49" electricity="0.00" noise="71.79" route="!3!var#1" type="myClass" waiting="0.00" lane="b9_0" pos="1.15" speed="5.58" angle="24.20" x="3894.96" y="2313.63"/>
+        <vehicle id="4" eclass="HBEFA3/PC_G_EU4" CO2="5015.12" CO="161.18" HC="0.85" NOx="2.24" PMx="0.11" fuel="1599.62" electricity="0.00" noise="71.43" route="!4!var#1" type="myClass" waiting="0.00" lane=":662693955_6_0" pos="0.04" speed="3.24" angle="53.72" x="4915.99" y="2686.24"/>
+        <vehicle id="5" eclass="HBEFA3/PC_G_EU4" CO2="2624.72" CO="164.78" HC="0.81" NOx="1.20" PMx="0.07" fuel="837.22" electricity="0.00" noise="55.94" route="!5!var#1" type="myClass" waiting="0.00" lane="-51962460#1_0" pos="5.10" speed="0.00" angle="192.56" x="4531.86" y="3574.21"/>
+    </timestep>
+    <timestep time="6.00">
+        <vehicle id="0" eclass="HBEFA3/PC_G_EU4" CO2="0.00" CO="0.00" HC="0.00" NOx="0.00" PMx="0.00" fuel="0.00" electricity="0.00" noise="63.69" route="!0!var#1" type="myClass" waiting="0.00" lane="51962227#1_0" pos="67.57" speed="13.71" angle="279.19" x="5553.73" y="2500.75"/>
+        <vehicle id="1" eclass="HBEFA3/PC_G_EU4" CO2="0.00" CO="0.00" HC="0.00" NOx="0.00" PMx="0.00" fuel="0.00" electricity="0.00" noise="53.14" route="!1!var#1" type="myClass" waiting="0.00" lane=":6952725742_2_0" pos="4.26" speed="3.06" angle="78.06" x="3332.28" y="1169.92"/>
+        <vehicle id="2" eclass="HBEFA3/PC_G_EU4" CO2="0.00" CO="0.00" HC="0.00" NOx="0.00" PMx="0.00" fuel="0.00" electricity="0.00" noise="56.68" route="!2!var#1" type="myClass" waiting="0.00" lane="51962474#1_0" pos="39.62" speed="9.45" angle="132.16" x="3830.22" y="3614.74"/>
+        <vehicle id="3" eclass="HBEFA3/PC_G_EU4" CO2="10717.14" CO="204.32" HC="1.19" NOx="4.78" PMx="0.24" fuel="3418.24" electricity="0.00" noise="75.58" route="!3!var#1" type="myClass" waiting="0.00" lane="b9_1" pos="10.33" speed="9.18" angle="24.67" x="3895.89" y="2323.31"/>
+        <vehicle id="4" eclass="HBEFA3/PC_G_EU4" CO2="0.00" CO="0.00" HC="0.00" NOx="0.00" PMx="0.00" fuel="0.00" electricity="0.00" noise="51.32" route="!4!var#1" type="myClass" waiting="0.00" lane=":662693955_6_0" pos="2.01" speed="1.97" angle="35.66" x="4916.31" y="2688.14"/>
+        <vehicle id="5" eclass="HBEFA3/PC_G_EU4" CO2="5328.49" CO="164.82" HC="0.88" NOx="2.39" PMx="0.12" fuel="1699.56" electricity="0.00" noise="72.33" route="!5!var#1" type="myClass" waiting="0.00" lane="-51962460#1_0" pos="8.52" speed="3.42" angle="192.56" x="4531.12" y="3570.87"/>
+        <vehicle id="6" eclass="HBEFA3/PC_G_EU4" CO2="2624.72" CO="164.78" HC="0.81" NOx="1.20" PMx="0.07" fuel="837.22" electricity="0.00" noise="55.94" route="!6!var#1" type="myClass" waiting="0.00" lane="-164214179#1_0" pos="5.10" speed="0.00" angle="25.26" x="3759.47" y="1516.50"/>
+    </timestep>
+</emission-export>

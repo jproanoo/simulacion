@@ -1,0 +1,3 @@
+<additional>
+  <vType id="type1" length="5.0" minGap="0.20" vClass="passenger" departLane="random" maxSpeed="19.5" speedFactor="0.90" speedDev="0.25" accel="4.5" decel="6.5" emergencyDecel="9.0"/>
+</additional>
