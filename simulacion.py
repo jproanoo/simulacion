@@ -5,7 +5,7 @@ import os
 import random
 
 from mongoengine import connect
-from mongoengine import Document, IntField, FloatField
+from mongoengine import Document, IntField, FloatField, StringField
 
 class Generar_parametros(object):
 
@@ -29,6 +29,7 @@ class Generar_parametros(object):
 
 
 class Parametros(Document):
+    paramid = StringField(required=True)
     length = IntField(required=True)
     maxSpeed = FloatField(required=True)
     speedFactor = FloatField(required=True)
@@ -48,6 +49,7 @@ def gen_vehicle(id,vClass):
     simulaciones = Parametros()
     generar_parametros=Generar_parametros()
     simulaciones.conectarse('simulacionesdb')
+    simulaciones.paramid=id
     simulaciones.length=generar_parametros.get_length(5,2)
     length=simulaciones.length
     simulaciones.maxSpeed=generar_parametros.get_maxspeed(5,2)
