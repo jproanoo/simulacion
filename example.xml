@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<additional><vType id="type1" Vclass="passenger" length="5.7811063870353605" maxSpeed="8.140773030759938" speedFactor="2.0808244210870344" speedDev="1.7160632803850189" accel="-0.3463472900839226" decel="2.49931954494759"></vType></additional>
+<additional><vType id="type1" Vclass="passenger" length="2.0" maxSpeed="5.27" speedFactor="0.67" speedDev="0.42" accel="0.2" decel="2.45"></vType></additional>

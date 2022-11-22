@@ -9,34 +9,34 @@ from mongoengine import Document, IntField, FloatField, StringField
 
 class Generar_parametros(object):
 
-    def get_length(self,mu,sigma):
-        return random.normalvariate(mu, sigma)
+    def get_length(self,min,max):
+        return round(random.uniform(min, max),0)
 
     def get_maxspeed(self,mu,sigma):
-        return random.normalvariate(mu, sigma)
+        return round(random.normalvariate(mu, sigma),2)
     
     def get_speedfactor(self,mu,sigma):
-        return random.normalvariate(mu, sigma)
+        return round(random.normalvariate(mu, sigma),2)
 
     def get_speeddev(self,mu,sigma):
-        return random.normalvariate(mu, sigma)
+        return round(random.normalvariate(mu, sigma),2)
     
     def get_accel(self,mu,sigma):
-        return random.normalvariate(mu, sigma)
+        return round(random.normalvariate(mu, sigma),2)
 
     def get_decel(self,mu,sigma):
-        return random.normalvariate(mu, sigma)
+        return round(random.normalvariate(mu, sigma),2)
 
 
 class Parametros(Document):
     paramid = StringField(required=True)
     length = IntField(required=True)
-    maxSpeed = FloatField(required=True)
-    speedFactor = FloatField(required=True)
-    speeddev= FloatField(required=True)
-    accel= FloatField(required=True)
-    decel= FloatField(required=True)
-    speed_out_average = FloatField()
+    maxSpeed = FloatField(required=True,precision=2)
+    speedFactor = FloatField(required=True,precision=2)
+    speeddev= FloatField(required=True,precision=2)
+    accel= FloatField(required=True,precision=2)
+    decel= FloatField(required=True,precision=2)
+    speed_out_average = FloatField(precision=2)
     
     def conectarse(self,db):
         if connect(db):
@@ -50,7 +50,7 @@ def gen_vehicle(id,vClass):
     generar_parametros=Generar_parametros()
     simulaciones.conectarse('simulacionesdb')
     simulaciones.paramid=id
-    simulaciones.length=generar_parametros.get_length(5,2)
+    simulaciones.length=generar_parametros.get_length(1,3)
     length=simulaciones.length
     simulaciones.maxSpeed=generar_parametros.get_maxspeed(5,2)
     maxspeed=simulaciones.maxSpeed
@@ -58,9 +58,9 @@ def gen_vehicle(id,vClass):
     speedfactor=simulaciones.speedFactor
     simulaciones.speeddev=generar_parametros.get_speeddev(1,1)
     speeddev=simulaciones.speeddev
-    simulaciones.accel=generar_parametros.get_accel(1,1)
+    simulaciones.accel=generar_parametros.get_accel(2,1)
     accel=simulaciones.accel
-    simulaciones.decel=generar_parametros.get_decel(1,1)
+    simulaciones.decel=generar_parametros.get_decel(2,1)
     decel=simulaciones.decel
 
     simulaciones.save()
@@ -80,7 +80,7 @@ def gen_vehicle(id,vClass):
                 }
 
     print(xmltodict.unparse(xmldata,pretty=True))
-    with open('example.xml', 'a') as result_file:
+    with open('example.xml', 'w') as result_file:
         result_file.write(xmltodict.unparse(xmldata))
 
 
